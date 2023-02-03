@@ -46,6 +46,3 @@ test-long: ## Runs all tests, including long-running tests
 run-accumulator-ecc: ## Runs test of cryptographic accumulator
 	${GO} run test/accumulator/ecc/main.go
 
-.PHONY: compare-bench
-compare-bench: ## Runs bench on master and the current branch and compares the result
-	bash scripts/perf-comp-local

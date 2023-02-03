@@ -26,3 +26,6 @@ vendor/
 
 # Desktop Service Store (macOS)
 .DS_Store
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store

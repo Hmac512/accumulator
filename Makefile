@@ -41,33 +41,6 @@ test-clean: ## Clear test cache and force all tests to be rerun
 test-long: ## Runs all tests, including long-running tests
 	${GO} test ${TEST_CLAUSE} ./...
 
-.PHONY: run-dkg-bls
-run-dkg-bls: ## Runs test of gennaro dkg w/ BLS signature
-	${GO} run test/dkg/bls/main.go
-
-.PHONY: run-dkg-ed25519
-run-dkg-ed25519: ## Runs test of gennaro dkg w/ ed25519 signature
-	${GO} run test/dkg/ed25519/main.go
-
-.PHONY: run-frost-dkg-bls
-run-frost-dkg-bls: ## Runs test of frost dkg w/ BLS signature
-	${GO} run test/frost_dkg/bls/main.go
-
-.PHONY: run-frost-dkg-ed25519
-run-frost-dkg-ed25519: ## Runs test of frost dkg w/ ed25519 signature
-	${GO} run test/frost_dkg/ed25519/main.go
-
-.PHONY: run-frost-dkg-ecdsa
-run-frost-dkg-ecdsa: ## Runs test of frost dkg w/ ecdsa signature
-	${GO} run test/frost_dkg/k256/main.go
-
-.PHONY: run-frost-full
-run-frost-full: ## Runs test of frost dkg w/ frost signature
-	${GO} run test/frost_dkg/frost/main.go
-
-.PHONY: run-verenc-elgamal
-run-verenc-elgamal: ## Runs test of el-gamal verifiable encryption
-	${GO} run test/verenc/elgamal/main.go
 
 .PHONY: run-accumulator-ecc
 run-accumulator-ecc: ## Runs test of cryptographic accumulator

@@ -11,6 +11,7 @@ import (
 )
 
 func main() {
+	fmt.Println("Starting command line accumulator")
 	curve := curves.BLS12381(&curves.PointBls12381G1{})
 	sk, _ := new(accumulator.SecretKey).New(curve, []byte("1234567890"))
 	pk, _ := sk.GetPublicKey(curve)
